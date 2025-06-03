@@ -7,16 +7,18 @@
     text-decoration: none;
 }
 
-
+.grid{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
 
 body, html {
   height: 100%;
   font-family: 'Georgia', serif;
 }
 
-.section-p1 {
-  padding: 36px 55px;
-}
+
 
 .section-m1 {
   margin: 40px 0;

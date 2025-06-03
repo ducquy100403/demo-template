@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 <body>
     <section id="hero">
@@ -24,34 +25,49 @@
         </div>
     </section>
 
-    <section id="category" class="section-p1">
-        <h1>Shop by category</h1>
+    <section id="category" >
+        <div class="grid">
+            <h1>Shop by category</h1>
         <div class="category-circle">
             <div class="category-item">
-                <img src="image/destop/makeup.webp" alt="Category 1">
+                <div class="image-wrapper">
+                    <img src="image/makeup.webp" alt="Cushion">
+                </div>
                 <p>Makeup</p>
             </div>
             <div class="category-item">
-                <img src="image/destop/lipstic.webp" alt="Category 2">
+                <div class="image-wrapper">
+                    <img src="image/lipstic.webp" alt="Cushion">
+                </div>
                 <p>Lipstick</p>
             </div>
             <div class="category-item">
-                <img src="image/destop/cushion.webp" alt="Category 3">
+                <div class="image-wrapper">
+                    <img src="image/cushion.webp" alt="Cushion">
+                </div>
                 <p>Cushion</p>
             </div>
             <div class="category-item">
-                <img src="image/destop/eyes&blush.webp" alt="Category 3">
+                <div class="image-wrapper">
+                    <img src="image/eyes&blush.webp" alt="Cushion">
+                </div>
                 <p>Eyes & Blush</p>
             </div>
             <div class="category-item">
-                <img src="image/destop/masscara.webp" alt="Category 3">
+                <div class="image-wrapper">
+                    <img src="image/masscara.webp" alt="Cushion">
+                </div>
                 <p>Mascaras</p>
             </div>
             <div class="category-item">
-                <img src="image/destop/cleanser.webp" alt="Category 3">
+                <div class="image-wrapper">
+                    <img src="image/cleanser.webp" alt="Cushion">
+                </div>
                 <p>Cleanser</p>
             </div>
         </div>
+        </div>
+
     </section>
 
     <section id="banner" class="section-m2">
@@ -62,8 +78,8 @@
             <button class="banner-btn">Shop the sale</button>
         </div>
         <div class="banner-image">
-            <img class="bg-image" src="image/destop/banner_1.jpg" alt="Banner Image">
-            <img class="logo-overlay" src="image/destop/logo_animate_black.png" alt="Logo">
+            <img class="bg-image" src="image/banner_1.jpg" alt="Banner Image">
+            <img class="logo-overlay" src="image/logo_animate_black.png" alt="Logo">
         </div>
     </section>
 
@@ -78,31 +94,151 @@
         <p>Exclusions and terms apply. Discount applied at checkout.</p>
     </section>
 
-    <section id="products" class="section-p1">
-        <h1>Featured Products</h1>
-        <div class="product-container">
-            <div class="product-item">
-                <img src="image/destop/product_1.jpg" alt="Product 1">
-                <h2>Product Name 1</h2>
-                <p>$19.99</p>
+    <section class="product-section">
+        <div class="grid">
+            <div class="product-section__block product-section__block--deal">
+                <h2 class="product-section__title">Deal Of The Day Products</h2>
+                <div class="product-section__container">
+                    <div class="product-banner">
+                        <img src="image/makeup-bn1.jpg" alt="Banner" class="product-banner__image">
+                    </div>
+                    <div class="product-list">
+                        <div class="product-card">
+                            <span class="product-card__badge">Save 20%</span>
+                            <img src="image/catrice2.webp" alt="Product 1" class="product-card__image">
+                            <h4 class="product-card__brand">Catrice</h4>
+                            <h3 class="product-card__name">Makeup Revolution Palette</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">$19.00</span>
+                                <span class="product-card__price--old">$24.00</span>
+                            </div>
+                            <div class="product-card__stock product-card__stock--in">
+                                <span class="product-card__stock-dot"></span> In stock (22 units)
+                            </div>
+                            <button class="product-card__btn">Add to cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-card__badge">Save 21%</span>
+                            <img src="image/catrice.webp" alt="Product 2" class="product-card__image">
+                            <h4 class="product-card__brand">Catrice</h4>
+                            <h3 class="product-card__name">Flawless Eye Shadow</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">$25.00</span>
+                                <span class="product-card__price--old">$32.00</span>
+                            </div>
+                            <div class="product-card__stock product-card__stock--low">
+                                <span class="product-card__stock-dot"></span> Low stock (20 units)
+                            </div>
+                            <button class="product-card__btn">Add to cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-card__badge">Save 27%</span>
+                            <img src="image/catrice2.webp" alt="Product 3" class="product-card__image">
+                            <h4 class="product-card__brand">Catrice</h4>
+                            <h3 class="product-card__name">Waterproof Eye Shadow</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">$39.00</span>
+                                <span class="product-card__price--old">$54.00</span>
+                            </div>
+                            <div class="product-card__stock product-card__stock--low">
+                                <span class="product-card__stock-dot"></span> Low stock (20 units)
+                            </div>
+                            <button class="product-card__btn">Add to cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-card__badge">Save 27%</span>
+                            <img src="image/catrice2.webp" alt="Product 3" class="product-card__image">
+                            <h4 class="product-card__brand">Catrice</h4>
+                            <h3 class="product-card__name">Waterproof Eye Shadow</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">$39.00</span>
+                                <span class="product-card__price--old">$54.00</span>
+                            </div>
+                            <div class="product-card__stock product-card__stock--low">
+                                <span class="product-card__stock-dot"></span> Low stock (20 units)
+                            </div>
+                            <button class="product-card__btn">Add to cart</button>
+                        </div>
+
+                        <div class="product-card">
+                            <span class="product-card__badge">Save 27%</span>
+                            <img src="image/catrice2.webp" alt="Product 3" class="product-card__image">
+                            <h4 class="product-card__brand">Catrice</h4>
+                            <h3 class="product-card__name">Waterproof Eye Shadow</h3>
+                            <div class="product-card__price">
+                                <span class="product-card__price--current">$39.00</span>
+                                <span class="product-card__price--old">$54.00</span>
+                            </div>
+                            <div class="product-card__stock product-card__stock--low">
+                                <span class="product-card__stock-dot"></span> Low stock (20 units)
+                            </div>
+                            <button class="product-card__btn">Add to cart</button>
+                        </div>
+                     </div>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="image/destop/product_2.jpg" alt="Product 2">
-                <h2>Product Name 2</h2>
-                <p>$29.99</p>
-            </div>
-            <div class="product-item">
-                <img src="image/destop/product_3.jpg" alt="Product 3">
-                <h2>Product Name 3</h2>
-                <p>$39.99</p>
-            </div>
-            <div class="product-item">
-                <img src="image/destop/product_4.jpg" alt="Product 4">
-                <h2>Product Name 4</h2>
-                <p>$49.99</p>
+
+            <div class="product-section__block product-section__block--featured" style="margin-top: 60px;">
+                <h2 class="product-section__title">Featured Product</h2>
+                <p class="product-section__description">Transform Your Beauty Routine With Our Plant-Based Cosmetics</p>
+                <div class="product-section__container">
+                <div class="product-banner">
+                    <img src="image/makeup-bn2.jpg" alt="Banner" class="product-banner__image">
+                </div>
+                <div class="product-list">
+                    <div class="product-card">
+                    <span class="product-card__badge">Save 20%</span>
+                    <img src="image/catrice2.webp" alt="Product 1" class="product-card__image">
+                    <h4 class="product-card__brand">Catrice</h4>
+                    <h3 class="product-card__name">Makeup Revolution Palette</h3>
+                    <div class="product-card__price">
+                        <span class="product-card__price--current">$19.00</span>
+                        <span class="product-card__price--old">$24.00</span>
+                    </div>
+                    <div class="product-card__stock product-card__stock--low">
+                        <span class="product-card__stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="product-card__btn">Add to cart</button>
+                    </div>
+
+                    <div class="product-card">
+                    <span class="product-card__badge">Save 21%</span>
+                    <img src="image/catrice.webp" alt="Product 2" class="product-card__image">
+                    <h4 class="product-card__brand">Catrice</h4>
+                    <h3 class="product-card__name">Flawless Eye Shadow</h3>
+                    <div class="product-card__price">
+                        <span class="product-card__price--current">$25.00</span>
+                        <span class="product-card__price--old">$32.00</span>
+                    </div>
+                    <div class="product-card__stock product-card__stock--low">
+                        <span class="product-card__stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="product-card__btn">Add to cart</button>
+                    </div>
+
+                    <div class="product-card">
+                    <span class="product-card__badge">Save 27%</span>
+                    <img src="image/catrice2.webp" alt="Product 3" class="product-card__image">
+                    <h4 class="product-card__brand">Catrice</h4>
+                    <h3 class="product-card__name">Waterproof Eye Shadow</h3>
+                    <div class="product-card__price">
+                        <span class="product-card__price--current">$39.00</span>
+                        <span class="product-card__price--old">$54.00</span>
+                    </div>
+                    <div class="product-card__stock product-card__stock--low">
+                        <span class="product-card__stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="product-card__btn">Add to cart</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-    </section>
+</section>
+
 </body>
 </html>
