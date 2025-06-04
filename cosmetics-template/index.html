@@ -6,8 +6,207 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <style>
+        #client {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fbe6eb;
+}
+
+#client h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 28px;
+  color: #3a3a3a;
+}
+
+#client .swiper-slide {
+  display: flex !important;
+  gap: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  height: 320px;
+}
+
+#client .comment-item {
+  background: white;
+  border-radius: 6px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  border: 1px solid #eee;
+}
+
+#client .user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+#client .user-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#client .user-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+#client .verified {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #999;
+  gap: 6px;
+}
+
+#client .verified svg {
+  width: 14px;
+  height: 14px;
+  fill: #f44336;
+}
+
+#client .stars {
+  color: #f44336;
+  margin-bottom: 15px;
+}
+
+#client .stars svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+#client .comment-text {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+  flex-grow: 1;
+  font-style: italic;
+}
+
+#client .swiper-button-prev,
+#client .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255 255 255 / 0.9);
+  border-radius: 50%;
+  color: #f44336;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 10px rgb(244 67 54 / 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1.5px solid #f44336;
+}
+
+#client .swiper-button-prev:hover,
+#client .swiper-button-next:hover {
+  background-color: rgba(244 67 54 / 0.15);
+  box-shadow: 0 0 14px rgb(244 67 54 / 0.6);
+}
+
+#client .swiper-button-prev {
+  left: 0;
+}
+
+#client .swiper-button-next {
+  right: 0;
+}
+
+#client .swiper-button-prev::after,
+#client .swiper-button-next::after {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f44336;
+  text-shadow: none;
+}
+
+#client .swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+#client .swiper-pagination {
+  margin-top: 25px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+#client .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  border-radius: 50%;
+}
+
+#client .swiper-pagination-bullet-active {
+  background-color: #f44336;
+  width: 14px;
+  height: 14px;
+}
+
+/* Responsive - mobile */
+@media (max-width: 768px) {
+  #client .swiper-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+
+  #client .swiper-slide {
+    flex: 0 0 auto !important;
+    max-width: none !important;
+    height: auto !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px;
+  }
+
+  #client .comment-item {
+    flex: 0 0 260px !important;
+    max-width: 260px !important;
+    min-width: 260px !important;
+    height: auto !important;
+  }
+
+  #client .swiper-button-prev,
+  #client .swiper-button-next,
+  #client .swiper-pagination {
+    display: none !important;
+  }
+}
+
+    </style>
 </head>
 <body>
     <section id="hero">
@@ -73,7 +272,7 @@
     <section id="banner" class="section-m2">
         <div class="banner-content">
             <p>SPECIAL OFFER</p>
-            <h1>40% OFF</h2>
+            <h1>40% OFF</h1>
             <h4>Set For A Good Time</h4>
             <button class="banner-btn">Shop the sale</button>
         </div>
@@ -94,7 +293,7 @@
         <p>Exclusions and terms apply. Discount applied at checkout.</p>
     </section>
 
-    <section class="product-section">
+    <section id="product-section">
         <div class="grid">
             <div class="product-section__block product-section__block--deal">
                 <h2 class="product-section__title">Deal Of The Day Products</h2>
@@ -108,13 +307,13 @@
                             <div class="swiper-slide">
                                 <div class="product-list">
                                     <div class="product-card">
-                                        <span class="product-card__badge">Save 20%</span>
-                                        <img src="image/catrice2.webp" alt="Product 1" class="product-card__image">
-                                        <h4 class="product-card__brand">Catrice</h4>
-                                        <h3 class="product-card__name">Makeup Revolution Palette</h3>
+                                        <span class="product-card__badge">Save 14%</span>
+                                        <img src="image/pr_13.webp" alt="Product 1" class="product-card__image">
+                                        <h4 class="product-card__brand">Lipstick</h4>
+                                        <h3 class="product-card__name">Liquid Lipstick Dark Shade</h3>
                                         <div class="product-card__price">
-                                            <span class="product-card__price--current">$19.00</span>
-                                            <span class="product-card__price--old">$24.00</span>
+                                            <span class="product-card__price--current">$14.36</span>
+                                            <span class="product-card__price--old">$16.67</span>
                                         </div>
                                         <div class="product-card__stock product-card__stock--in">
                                             <span class="product-card__stock-dot"></span> In stock (22 units)
@@ -138,10 +337,10 @@
                                     </div>
 
                                     <div class="product-card">
-                                        <span class="product-card__badge">Save 27%</span>
-                                        <img src="image/catrice2.webp" alt="Product 3" class="product-card__image">
-                                        <h4 class="product-card__brand">Catrice</h4>
-                                        <h3 class="product-card__name">Waterproof Eye Shadow</h3>
+                                        <span class="product-card__badge">Save 5%</span>
+                                        <img src="image/elowen-lip.webp" alt="Product 3" class="product-card__image">
+                                        <h4 class="product-card__brand">Elowen Liz</h4>
+                                        <h3 class="product-card__name">Anti-Pollution Drops</h3>
                                         <div class="product-card__price">
                                             <span class="product-card__price--current">$39.00</span>
                                             <span class="product-card__price--old">$54.00</span>
@@ -156,12 +355,12 @@
                             <div class="swiper-slide">
                                 <div class="product-list">
                                     <div class="product-card">
-                                        <span class="product-card__badge">Save 20%</span>
-                                        <img src="image/catrice2.webp" alt="Product 1" class="product-card__image">
-                                        <h4 class="product-card__brand">Catrice</h4>
-                                        <h3 class="product-card__name">Makeup Revolution Palette</h3>
+                                        <span class="product-card__badge">Save 6%</span>
+                                        <img src="image/lip3.webp" alt="Product 1" class="product-card__image">
+                                        <h4 class="product-card__brand">beae-template</h4>
+                                        <h3 class="product-card__name">Plump Shine Lipstick</h3>
                                         <div class="product-card__price">
-                                            <span class="product-card__price--current">$19.00</span>
+                                            <span class="product-card__price--current">$16.76</span>
                                             <span class="product-card__price--old">$24.00</span>
                                         </div>
                                         <div class="product-card__stock product-card__stock--in">
@@ -267,21 +466,660 @@
             </div>
     </div>
 
+    </section>
+
+   <section id="treatment">
+        <div class="overlay"></div>
+        <div class="content">
+            <h4>Treatment</h4>
+            <h1>Face Your Skin With Us</h1>
+            <p>Skincare made with the world’s finest plant oils and absolutes.</p>
+            <button>Shop all</button>
+        </div>
+    </section>
+
+    <section id="promo-section">
+        <div class="promo-content">
+            <h2>In Clean Beauty List</h2>
+            <p>Discover our Bestseller Edit, the best products to restart and refresh your skincare and beauty routine.</p>
+            <button>Explore now</button>
+        </div>
+        <div class="promo-image">
+            <img src="/image/banner_6.jpg" alt="Beauty Products" />
+        </div>
+    </section>
+
+    <section id="naturally">
+        <div class="grid">
+            <div class="naturally__header-left">
+                <h2 class="naturally__title">Love Your Skin Naturally</h2>
+                <p class="naturally__subtitle">Organic, natural products from sustainable sources without harmful chemicals and toxins</p>
+                <button class="naturally__btn-view-all">View all products</button>
+            </div>
+
+            <div class="naturally__container">
+                <div class="naturally__media">
+                    <video class="naturally__video" controls>
+                    <source src="https://cdn.shopify.com/videos/c/o/v/7f8c1877e2f14aa695d39ee800774ac5.mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="naturally__list">
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_8.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">The Good C Vitamin C Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_10.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">The Good C Vitamin C Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+
+
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_5.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">The Good C Vitamin C SerumThe Good C Vitamin C Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+
+
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_5.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">Night Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+
+
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_7.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">Night Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+
+
+                    <div class="naturally__card">
+                        <span class="naturally__card__badge">Save 27%</span>
+                        <img src="image/pr_6.webp" alt="Waterproof Eye Shadow" class="naturally__card__image" />
+                        <h4 class="naturally__card__brand">Elowen Liz</h4>
+                        <h3 class="naturally__card__name">Night Serum</h3>
+                        <div class="naturally__card__price">
+                            <span class="naturally__card__price--current">$39.00</span>
+                            <span class="naturally__card__price--old">$54.00</span>
+                        </div>
+                        <div class="naturally__card__stock naturally__card__stock--low">
+                            <span class="naturally__card__stock-dot"></span> Low stock (20 units)
+                        </div>
+                        <button class="naturally__card__btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="lip-makeup">
+    <div class="grid">
+        <div class="lip-makeup__header-left">
+            <h2 class="lip-makeup__title">Love Your Lip Makeup</h2>
+            <p class="lip-makeup__subtitle">Premium lip makeup products with rich colors and long-lasting effect</p>
+            <button class="lip-makeup__btn-view-all">View all products</button>
+        </div>
+
+        <div class="lip-makeup__container">
+            <div class="lip-makeup__list">
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge">Save 27%</span>
+                    <img src="image/pr_15.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock lip-makeup__card-stock--low">
+                        <span class="lip-makeup__card-stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn">Add to cart</button>
+                </div>
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge">Save 27%</span>
+                    <img src="image/pr_12.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock lip-makeup__card-stock--low">
+                        <span class="lip-makeup__card-stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn">Add to cart</button>
+                </div>
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge">Save 27%</span>
+                    <img src="image/pr_11.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock lip-makeup__card-stock--low">
+                        <span class="lip-makeup__card-stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn">Add to cart</button>
+                </div>
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge">Save 27%</span>
+                    <img src="image/pr_16.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock lip-makeup__card-stock--low">
+                        <span class="lip-makeup__card-stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn">Add to cart</button>
+                </div>
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge--sold-out">Save 27%</span>
+                    <img src="image/pr_14.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock-soldout lip-makeup__card-stock--soldout">
+                        <span class="lip-makeup__card-stock-dot"></span> Out of stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn-sold-out">Sold out</button>
+                </div>
+
+                <div class="lip-makeup__card">
+                    <span class="lip-makeup__card-badge">Save 27%</span>
+                    <img src="image/pr_15.webp" alt="Waterproof Eye Shadow" class="lip-makeup__card-image" />
+                    <h4 class="lip-makeup__card-brand">Catrice</h4>
+                    <h3 class="lip-makeup__card-name">Waterproof Eye Shadow</h3>
+                    <div class="lip-makeup__card-price">
+                        <span class="lip-makeup__card-price--current">$39.00</span>
+                        <span class="lip-makeup__card-price--old">$54.00</span>
+                    </div>
+                    <div class="lip-makeup__card-stock lip-makeup__card-stock--low">
+                        <span class="lip-makeup__card-stock-dot"></span> Low stock (20 units)
+                    </div>
+                    <button class="lip-makeup__card-btn">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="lip-makeup__media">
+                <img src="/image/banner_7.jpg" alt="..." class="lip-makeup__image" />
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="fresh">
+        <div class="grid">
+            <div class="fresh-container">
+                <div class="fresh-banner-left">
+                <h1>Fresh Throughout The Day</h1>
+                <p>Achieve A Flawless Look That Stays Vibrant And Fresh Throughout The Day.</p>
+                <button class="btn-shop">Shop the products</button>
+            </div>
+            <div class="fresh-banner-right">
+                <img src="/image/banner_8.jpg" alt="Beauty spa" />
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="last-list">
+  <div class="grid">
+    <div class="last-list">
+
+      <div class="last-card">
+        <span class="last-card__badge">Save 14%</span>
+        <img src="image/pr_13.webp" alt="Liquid Lipstick Dark Shade" class="last-card__image" />
+        <h4 class="last-card__brand">Lipstick</h4>
+        <div class="last-card__price">
+          <span class="last-card__price--current">$14.36</span>
+          <span class="last-card__price--old">$16.67</span>
+        </div>
+        <div class="last-card__stock last-card__stock--in">
+          <span class="last-card__stock-dot"></span> In stock (22 units)
+        </div>
+        <button class="last-card__btn">Add to cart</button>
+      </div>
+
+      <div class="last-card">
+        <span class="last-card__badge">Save 21%</span>
+        <img src="image/catrice.webp" alt="Flawless Eye Shadow" class="last-card__image" />
+        <h4 class="last-card__brand">Catrice</h4>
+        <div class="last-card__price">
+          <span class="last-card__price--current">$25.00</span>
+          <span class="last-card__price--old">$32.00</span>
+        </div>
+        <div class="last-card__stock last-card__stock--low">
+          <span class="last-card__stock-dot"></span> Low stock (20 units)
+        </div>
+        <button class="last-card__btn">Add to cart</button>
+      </div>
+
+
+
+       <div class="last-card">
+        <span class="last-card__badge">Save 27%</span>
+        <img src="image/catrice2.webp" alt="Waterproof Eye Shadow" class="last-card__image" />
+        <h4 class="last-card__brand">Catrice</h4>
+        <div class="last-card__price">
+          <span class="last-card__price--current">$39.00</span>
+          <span class="last-card__price--old">$54.00</span>
+        </div>
+        <div class="last-card__stock last-card__stock--low">
+          <span class="last-card__stock-dot"></span> Low stock (20 units)
+        </div>
+        <button class="last-card__btn">Add to cart</button>
+      </div>
+
+       <div class="last-card">
+        <span class="last-card__badge">Save 27%</span>
+        <img src="image/catrice2.webp" alt="Waterproof Eye Shadow" class="last-card__image" />
+        <h4 class="last-card__brand">Catrice</h4>
+        <div class="last-card__price">
+          <span class="last-card__price--current">$39.00</span>
+          <span class="last-card__price--old">$54.00</span>
+        </div>
+        <div class="last-card__stock last-card__stock--low">
+          <span class="last-card__stock-dot"></span> Low stock (20 units)
+        </div>
+        <button class="last-card__btn">Add to cart</button>
+      </div>
+
+       <div class="last-card">
+        <span class="last-card__badge">Save 27%</span>
+        <img src="image/catrice2.webp" alt="Waterproof Eye Shadow" class="last-card__image" />
+        <h4 class="last-card__brand">Catrice</h4>
+        <div class="last-card__price">
+          <span class="last-card__price--current">$39.00</span>
+          <span class="last-card__price--old">$54.00</span>
+        </div>
+        <div class="last-card__stock last-card__stock--low">
+          <span class="last-card__stock-dot"></span> Low stock (20 units)
+        </div>
+        <button class="last-card__btn">Add to cart</button>
+      </div>
+
+    </div>
+  </div>
+    </section>
+
+    <section id="client">
+    <div class="grid">
+        <h2>What Clients Are Saying</h2>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper" id="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Emma L."
+            />
+            <div>
+              <div class="user-name">Emma L.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "I've been using the revitalizing serum for three months now, and the results are incredible! My skin feels smoother, and the fine lines around my eyes have visibly reduced. I love how lightweight and non-greasy it is. Highly recommend it to anyone looking to improve their skin texture!"
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/men/30.jpg"
+              alt="Michael R."
+            />
+            <div>
+              <div class="user-name">Michael R.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "As someone with sensitive skin, finding the right moisturizer has always been a challenge. But your gentle hydrating cream has been a game-changer for me. It's soothing, hydrating, and doesn't cause any irritation. My skin has never felt this good!"
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Sophia G."
+            />
+            <div>
+              <div class="user-name">Sophia G.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "The anti-aging night cream is a must-have in my skincare routine. After just a few weeks, I noticed a significant difference in my skin's elasticity and overall appearance. It's rich but not heavy, and I wake up every morning with a glowing complexion. Thank you for creating such an amazing product!"
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt="Emma L."
+            />
+            <div>
+              <div class="user-name">Emma L.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "I've been using the revitalizing serum for three months now, and the results are incredible! My skin feels smoother, and the fine lines around my eyes have visibly reduced. I love how lightweight and non-greasy it is. Highly recommend it to anyone looking to improve their skin texture!"
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/men/30.jpg"
+              alt="Michael R."
+            />
+            <div>
+              <div class="user-name">Michael R.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "As someone with sensitive skin, finding the right moisturizer has always been a challenge. But your gentle hydrating cream has been a game-changer for me. It's soothing, hydrating, and doesn't cause any irritation. My skin has never felt this good!"
+          </div>
+        </div>
+
+        <div class="comment-item">
+          <div class="user-info">
+            <img
+              class="user-avatar"
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              alt="Sophia G."
+            />
+            <div>
+              <div class="user-name">Sophia G.</div>
+              <div class="verified">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                    10-4.48 10-10S17.52 2 12 2zm-1
+                    15l-5-5 1.41-1.41L11 14.17l6.59-6.59L19
+                    9l-8 8z" />
+                </svg>
+                Verified review
+              </div>
+            </div>
+          </div>
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+          <div class="comment-text">
+            "The anti-aging night cream is a must-have in my skincare routine. After just a few weeks, I noticed a significant difference in my skin's elasticity and overall appearance. It's rich but not heavy, and I wake up every morning with a glowing complexion. Thank you for creating such an amazing product!"
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+    </div>
+
 </section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 <script>
-  const swiper = new Swiper(".product-swiper", {
+    // Biến swiper riêng cho product
+let productSwiper = undefined;
+
+function initProductSwiper() {
+  productSwiper = new Swiper('.product-swiper', {
     slidesPerView: 1,
+    spaceBetween: 10,
+    loop: false,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.product-swiper .swiper-button-next',
+      prevEl: '.product-swiper .swiper-button-prev',
+      disabledClass: 'swiper-button-disabled',
     },
     pagination: {
-      el: ".swiper-pagination",
-      type: "progressbar"
+      el: '.product-swiper .swiper-pagination', // nếu có pagination riêng cho product, hoặc bỏ nếu không dùng
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 1,
+      }
     }
   });
+}
+
+function destroyProductSwiper() {
+  if (productSwiper) {
+    productSwiper.destroy(true, true);
+    productSwiper = undefined;
+  }
+}
+
+function checkProductScreen() {
+  if (window.innerWidth < 768) {
+    destroyProductSwiper();
+    // Khi destroy, cho swiper-wrapper flex-wrap nếu cần
+    const wrapper = document.querySelector('.product-swiper .swiper-wrapper');
+    if(wrapper) wrapper.style.flexWrap = 'wrap';
+  } else {
+    if (!productSwiper) {
+      initProductSwiper();
+      const wrapper = document.querySelector('.product-swiper .swiper-wrapper');
+      if(wrapper) wrapper.style.flexWrap = 'nowrap';
+    }
+  }
+}
+
+window.addEventListener('resize', checkProductScreen);
+window.addEventListener('load', checkProductScreen);
+
 </script>
+
+<script>
+    let swiper = undefined;
+
+    function initSwiper() {
+      swiper = new Swiper('.mySwiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          disabledClass: 'swiper-button-disabled',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    }
+
+    function destroySwiper() {
+      if (swiper) {
+        swiper.destroy(true, true);
+        swiper = undefined;
+      }
+    }
+
+    function checkScreen() {
+      if (window.innerWidth < 768) {
+        destroySwiper();
+        document.querySelector('.swiper-wrapper').style.flexWrap = 'wrap';
+      } else {
+        if (!swiper) {
+          initSwiper();
+          document.querySelector('.swiper-wrapper').style.flexWrap = 'nowrap';
+        }
+      }
+    }
+
+    window.addEventListener('resize', checkScreen);
+    window.addEventListener('load', checkScreen);
+  </script>
 
 </body>
 </html>
