@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.grid{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Georgia', serif;
+}
+
+
+
+
+.section-m2 {
+  margin: 40px 0 0 0;
+}
+
+
