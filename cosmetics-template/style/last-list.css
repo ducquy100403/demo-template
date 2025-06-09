@@ -1,0 +1,201 @@
+/* last product */
+.last-items {
+display: flex;
+gap: 20px;
+width: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: stretch;
+padding: 30.720px 0;
+}
+
+.last-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+width: 100%;
+height: auto;
+flex: 1 0 0px;
+align-self: stretch;
+position: relative;
+}
+
+.last-card img {
+width: 100%;
+height: auto;
+object-fit: cover;
+display: block;
+cursor: pointer;
+aspect-ratio: 1/1;
+}
+
+.last-genre {
+font-size: 15px;
+line-height: 22.5px;
+color: #5c5c5c;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+letter-spacing: 0.1px;
+}
+
+.last-name {
+font-size: 20px;
+line-height: 23px;
+text-transform: none;
+font-weight: 500;
+font-family: 'Beae-font-fdul';
+cursor: pointer;
+width: 100%;
+text-align: center;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+}
+
+.last-price {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.last-price-old {
+font-size: 15px;
+color: #dc2626;
+line-height: 22.5px;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+}
+
+.last-price-new {
+font-size: 15px;
+color: #8a8a8a;
+line-height: 22.5px;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+text-decoration: line-through;
+}
+
+.last-stock-info-in,
+.last-stock-info-low {
+display: flex;
+margin-top: 15.360px;
+font-size: 12px;
+line-height: 18px;
+text-transform: none;
+letter-spacing: 1px;
+font-family: sans-serif;
+font-weight: 400;
+gap: 14px;
+justify-content: center;
+align-items: center;
+}
+
+.last-stock-info-in {
+color: #3C9342;
+}
+
+.last-stock-info-low {
+color: #A77A06;
+}
+
+.last-stock-info-dot-stock-in,
+.last-stock-info-dot-stock-low {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+animation: pulse 1.5s infinite;
+}
+
+.last-stock-info-dot-stock-in {
+background-color: #3C9342;
+}
+
+.last-stock-info-dot-stock-low {
+background-color: #A77A06;
+}
+
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(60, 147, 66, 0.7);
+}
+70% {
+box-shadow: 0 0 0 4px rgba(60, 147, 66, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(60, 147, 66, 0);
+}
+}
+
+#last-list button {
+margin-top: 15.360px;
+width: 100%;
+height: auto;
+background-color: white;
+color: black;
+padding: 10px;
+border: 1px solid black;
+cursor: pointer;
+}
+
+#last-list button span {
+font-size: 16px;
+line-height: 24px;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+}
+
+#last-list button:hover {
+color: #ec7c98;
+}
+
+.last-card .last-save {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: #dc2626;
+color: white;
+padding: 4px 10px;
+font-size: 12px;
+font-weight: 400;
+letter-spacing: 1px;
+font-family: 'Beae-font-vqca', sans-serif;
+}
+
+@media (max-width: 768px) {
+#last-list {
+    padding: 17.584px 15px;
+    margin: 0 auto;
+}
+
+.last-items {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+.last-card {
+    flex: 0 0 40%;
+    width: 100%;
+}
+
+.last-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    height: 40px;
+}
+
+.last-stock-info-in,
+.last-stock-info-low {
+    margin-top: 5px;
+}
+
+#last-list button {
+    margin: 0;
+}
+}

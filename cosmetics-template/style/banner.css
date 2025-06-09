@@ -1,0 +1,151 @@
+#banner {
+display: flex;
+background-color: black;
+font-family: 'Playfair Display', serif;
+flex-wrap: wrap;
+}
+
+.banner-content {
+flex: 0.48;
+background-color: black;
+color: #f4b2c2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 60px 20px;
+}
+
+.banner-content p {
+font-size: 14px;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 20px;
+font-family: 'Inter', sans-serif;
+}
+
+.banner-content h1 {
+font-size: 100px;
+font-weight: bold;
+font-weight: 200;
+margin: 0;
+font-family: 'Inter', sans-serif;
+}
+
+.banner-content h4 {
+font-size: 31px;
+font-weight: 200;
+margin: 20px 0;
+letter-spacing: 0.1px;
+line-height: 35.65px;
+font-family: 'Playfair Display', serif;
+}
+
+.banner-btn {
+padding: 12px 28px;
+font-size: 16px;
+font-weight: 200;
+background-color: #f5a9b8;
+color: black;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-family: 'Inter', sans-serif;
+}
+
+.banner-btn:hover {
+background-color: black;
+color: white;
+}
+
+.banner-image {
+flex:0.52;
+overflow: hidden;
+position: relative;
+aspect-ratio: 5 / 4
+}
+
+.bg-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.logo-overlay {
+position: absolute;
+top: 34%;
+left: 40%;
+width: 160px;
+height: auto;
+animation: rotate 8s linear infinite;
+pointer-events: none;
+}
+
+
+@keyframes rotate {
+0% {
+transform: rotate(0deg);
+}
+100% {
+transform: rotate(360deg);
+}
+}
+
+/* banner-reponsive */
+@media (max-width: 768px) {
+#banner {
+flex-direction: column;
+}
+
+.banner-image {
+flex: none;
+width: 100%;
+height: auto;
+order: 1;
+height: 350px;
+}
+
+.bg-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.logo-overlay {
+top: 30%;
+left: 35%;
+transform: translate(-50%, -50%);
+width: 120px;
+}
+
+.banner-content {
+flex: none;
+padding: 40px 20px;
+order: 2;
+}
+
+.banner-content h1 {
+font-size: 80px;
+}
+
+.banner-content h4 {
+font-size: 18px;
+margin: 16px 0;
+}
+
+.banner-content p {
+font-size: 12px;
+letter-spacing: 1px;
+margin-bottom: 16px;
+}
+
+.banner-btn {
+font-size: 14px;
+padding: 10px 24px;
+}
+
+}
+

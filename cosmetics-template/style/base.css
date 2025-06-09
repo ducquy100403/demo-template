@@ -5,6 +5,18 @@
     text-decoration: none;
 }
 
+:root {
+  --font-label: 'Roboto', sans-serif;
+  --font-button: 'Inter', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-another: 'Montserrat', sans-serif;
+  --while-color: white;
+  --main-color: #f4b2c2
+  --text-list-color: #070707;
+  --text-brand-color:#5c5c5c
+}
+
+
 .grid{
     width: 1400px;
     max-width: 100%;
@@ -13,14 +25,8 @@
 
 body, html {
   height: 100%;
-  font-family: 'Georgia', serif;
 }
 
 
-
-
-.section-m2 {
-  margin: 40px 0 0 0;
-}
 
 

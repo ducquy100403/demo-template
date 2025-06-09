@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/hero.css">
+    <link rel="stylesheet" href="/style/category.css">
+    <link rel="stylesheet" href="/style/banner.css">
+    <link rel="stylesheet" href="/style/navigation.css">
+    <link rel="stylesheet" href="/style/product.css">
+    <link rel="stylesheet" href="/style/featured.css">
+    <link rel="stylesheet" href="/style/promo.css">
+    <link rel="stylesheet" href="/style/treatment.css">
+    <link rel="stylesheet" href="/style/naturally.css">
+    <link rel="stylesheet" href="/style/lip.css">
+    <link rel="stylesheet" href="/style/promo-split.css">
+    <link rel="stylesheet" href="/style/last-list.css">
+    <link rel="stylesheet" href="/style/comment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
     <section id="hero">
-        <video class="hero-bg-video" autoplay muted loop playsinline>
+      <div class="grid">
+          <video class="hero-bg-video" autoplay muted loop playsinline>
             <source src="https://cdn.shopify.com/videos/c/o/v/ac471c9cb53042d2bd8b67bedaaffbcf.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
         <div class="hero-content">
         <p>ADVANCED YOUTH</p>
@@ -22,54 +38,56 @@
             <button class="hero-btn-2">About us</button>
         </div>
         </div>
+      </div>
+
     </section>
 
-    <section id="category" >
+    <section id="category">
         <div class="grid">
           <div class="category-title">Shop by category</div>
-          <div class="category-circle">
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/makeup.webp" alt="Cushion">
-                  </div>
-                  <p>Makeup</p>
+          <div class="category-list">
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-1.webp" alt="Makeup">
               </div>
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/lipstic.webp" alt="Cushion">
-                  </div>
-                  <p>Lipstick</p>
+              <div class="category-name">Makeup</div>
+            </div>
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-2.webp" alt="Lipstick">
               </div>
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/cushion.webp" alt="Cushion">
-                  </div>
-                  <p>Cushion</p>
+              <div class="category-name">Lipstick</div>
+            </div>
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-3.webp" alt="Cushion">
               </div>
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/eyes&blush.webp" alt="Cushion">
-                  </div>
-                  <p>Eyes & Blush</p>
+              <div class="category-name">Cushion</div>
+            </div>
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-4.webp" alt="Eyes & Blush">
               </div>
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/masscara.webp" alt="Cushion">
-                  </div>
-                  <p>Mascaras</p>
+              <div class="category-name">Eyes & Blush</div>
+            </div>
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-5.webp" alt="Mascaras">
               </div>
-              <div class="category-item">
-                  <div class="image-wrapper">
-                      <img src="image/cleanser.webp" alt="Cushion">
-                  </div>
-                  <p>Cleanser</p>
+              <div class="category-name">Mascaras</div>
+            </div>
+            <div class="category-item">
+              <div class="category-img">
+                <img src="/image/ct-6.webp" alt="Cleanser">
               </div>
+              <div class="category-name">Cleanser</div>
+            </div>
           </div>
         </div>
 
     </section>
 
-    <section id="banner" class="section-m2">
+    <section id="banner">
         <div class="banner-content">
             <p>SPECIAL OFFER</p>
             <h1>40% OFF</h1>
@@ -538,7 +556,6 @@
 
     </section>
 
-
     <section id="last-list">
       <div class="grid">
         <div class="last-items">
@@ -871,9 +888,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-<script src="/slide-product.js"></script>
-
-<script src="/silde-comment.js"></script>
+<script src="/script/script.js"></script>
 
 </body>
 </html>

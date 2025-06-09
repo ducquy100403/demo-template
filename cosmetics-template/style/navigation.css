@@ -1,0 +1,44 @@
+/* nav-money */
+#navigation-money {
+padding: 0;
+}
+
+
+#navigation-money {
+background-color: #fcebef;
+padding: 30px 20px;
+text-align: center;
+}
+
+#navigation-money p {
+font-size: 12px;
+font-weight: 200;
+color: #070707;
+line-height: 19.5px;
+letter-spacing: 0.1px;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.nav-buttons{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 16px;
+margin-bottom: 16px;
+}
+
+.nav-buttons button {
+padding: 12px 24px;
+font-size: 16px;
+font-weight: 500;
+border: none;
+cursor: pointer;
+background-color: black ;
+color: white;
+}
+
+/* nav-money-reponsive */
+@media (max-width: 768px){
+    #navigation-money {
+        padding: 10px 20px;
+    }
+}

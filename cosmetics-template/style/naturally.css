@@ -1,0 +1,264 @@
+#naturally {
+display: flex;
+flex-direction: column;
+padding: 30px 0;
+gap: 30px;
+}
+
+.naturally__header-left {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 17.584px;
+}
+
+.naturally__title {
+font-size: 31px;
+line-height: 35.6px;
+color: #0c0c0c;
+font-family: 'Beae-font-qggl';
+font-weight: 200;
+}
+
+.naturally__subtitle {
+word-break: break-word;
+font-size: 15px;
+line-height: 22.5px;
+color: #5c5c5c;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+letter-spacing: 0.1px;
+}
+
+.naturally__btn-view-all {
+width: fit-content;
+background-color: black;
+color: white;
+padding: 14px 30px;
+border: none;
+cursor: pointer;
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
+}
+
+.naturally__btn-view-all:hover {
+background-color: #ec7c98;
+color: white;
+}
+
+/* Video + Sản phẩm */
+.naturally__container {
+display: flex;
+flex-direction: row;
+gap: 24px;
+align-items: stretch;
+}
+
+.naturally__media {
+flex: 0 0 36%;
+overflow: hidden;
+}
+
+.naturally__video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+aspect-ratio: 3 / 4;
+}
+
+.naturally__list {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+width: 100%;
+flex: 1;
+}
+
+.naturally__card {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+width: 100%;
+flex: 0 0 calc(33.333% - 13.33px);
+max-width: calc(33.333% - 13.33px);
+position: relative;
+}
+
+.naturally__card__image {
+width: 100%;
+object-fit: cover;
+display: block;
+cursor: pointer;
+aspect-ratio: 1 / 1;
+}
+
+.naturally__card__brand {
+font-size: 15px;
+line-height: 22.5px;
+color: #5c5c5c;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+letter-spacing: 0.1px;
+}
+
+.naturally__card__name {
+font-size: 20px;
+line-height: 23px;
+font-weight: 500;
+font-family: 'Beae-font-fdul';
+text-align: center;
+width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+display: -webkit-box;
+}
+
+.naturally__card__price {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.naturally__card__price--current {
+font-size: 15px;
+color: #dc2626;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+}
+
+.naturally__card__price--old {
+font-size: 15px;
+color: #8a8a8a;
+text-decoration: line-through;
+font-family: 'Beae-font-vqca', sans-serif;
+}
+
+.naturally__card__stock {
+display: flex;
+margin-top: 15px;
+font-size: 12px;
+line-height: 18px;
+text-transform: none;
+letter-spacing: 1px;
+font-family: sans-serif;
+font-weight: 400;
+gap: 14px;
+justify-content: center;
+align-items: center;
+}
+
+.naturally__card__stock--low {
+color: #A77A06;
+}
+
+.naturally__card__stock--in {
+color: #3C9342;
+}
+
+.naturally__card__stock-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+animation: pulse 1.5s infinite;
+}
+
+.naturally__card__stock--low .naturally__card__stock-dot {
+background-color: #A77A06;
+}
+
+.naturally__card__stock--in .naturally__card__stock-dot {
+background-color: #3C9342;
+}
+
+.naturally__card__badge {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: #dc2626;
+color: white;
+padding: 4px 10px;
+font-size: 12px;
+font-weight: 400;
+letter-spacing: 1px;
+font-family: 'Beae-font-vqca', sans-serif;
+}
+
+.naturally__card__btn {
+margin-top: 15.36px;
+width: 100%;
+background-color: white;
+color: black;
+padding: 12px;
+border: 1px solid black;
+cursor: pointer;
+font-size: 16px;
+font-family: 'Roboto', sans-serif;
+}
+
+.naturally__card__btn:hover {
+color: #ec7c98;
+}
+
+/* Animation dot */
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(167, 122, 6, 0.7);
+}
+70% {
+box-shadow: 0 0 0 4px rgba(167, 122, 6, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(167, 122, 6, 0);
+}
+}
+
+@media (max-width: 768px) {
+#naturally {
+padding: 20px 15px;
+}
+
+.naturally__container {
+flex-direction: column;
+gap: 0;
+}
+
+.naturally__media {
+flex: none;
+width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+
+.naturally__list {
+flex-wrap: nowrap;
+overflow-x: auto;
+gap: 16px;
+}
+
+.naturally__card {
+flex: 0 0 42%;
+max-width: 42%;
+}
+
+.naturally__card__name {
+font-size: 17px;
+height: 40px;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+display: -webkit-box;
+}
+
+.naturally__card__btn {
+margin: 0;
+}
+
+.naturally__card__stock {
+margin-top: 5px;
+}
+}

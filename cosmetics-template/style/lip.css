@@ -1,0 +1,299 @@
+#lip-makeup {
+display: flex;
+flex-direction: column;
+padding: 30px 0;
+gap: 30px;
+}
+
+.lip-makeup__header-left {
+display: flex;
+flex-direction: column;
+gap: 10px;
+margin-bottom: 17.584px;
+}
+
+.lip-makeup__title {
+font-size: 31px;
+line-height: 35.6px;
+color: #0c0c0c;
+font-family: 'Beae-font-qggl';
+font-weight: 200;
+}
+
+.lip-makeup__subtitle {
+word-break: break-word;
+font-size: 15px;
+line-height: 22.5px;
+color: #5c5c5c;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+letter-spacing: 0.1px;
+}
+
+.lip-makeup__btn-view-all {
+width: fit-content;
+background-color: black;
+color: white;
+padding: 14px 30px;
+border: none;
+cursor: pointer;
+font-size: 15px;
+font-family: 'Roboto', sans-serif;
+}
+
+.lip-makeup__btn-view-all:hover {
+background-color: #ec7c98;
+color: white;
+}
+
+/* Image + Sản phẩm */
+.lip-makeup__container {
+display: flex;
+flex-direction: row;
+gap: 24px;
+align-items: stretch;
+}
+
+.lip-makeup__media {
+flex: 0 0 40%;
+overflow: hidden;
+}
+
+.lip-makeup__image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+aspect-ratio: 3 / 4;
+}
+
+.lip-makeup__list {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+width: 100%;
+flex: 1;
+}
+
+.lip-makeup__card {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 5px;
+width: 100%;
+flex: 0 0 calc(33.333% - 13.33px);
+max-width: calc(33.333% - 13.33px);
+position: relative;
+}
+
+.lip-makeup__card-image {
+width: 100%;
+object-fit: cover;
+display: block;
+cursor: pointer;
+aspect-ratio: 1 / 1;
+}
+
+.lip-makeup__card-brand {
+font-size: 15px;
+line-height: 22.5px;
+color: #5c5c5c;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+letter-spacing: 0.1px;
+}
+
+.lip-makeup__card-name {
+font-size: 20px;
+line-height: 23px;
+font-weight: 500;
+font-family: 'Beae-font-fdul';
+text-align: center;
+width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+display: -webkit-box;
+}
+
+.lip-makeup__card-price {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.lip-makeup__card-price--current {
+font-size: 15px;
+color: #dc2626;
+font-family: 'Beae-font-vqca', sans-serif;
+font-weight: 400;
+}
+
+.lip-makeup__card-price--old {
+font-size: 15px;
+color: #8a8a8a;
+text-decoration: line-through;
+font-family: 'Beae-font-vqca', sans-serif;
+}
+
+.lip-makeup__card-stock {
+display: flex;
+margin-top: 15px;
+font-size: 12px;
+line-height: 18px;
+text-transform: none;
+letter-spacing: 1px;
+font-family: sans-serif;
+font-weight: 400;
+gap: 14px;
+justify-content: center;
+align-items: center;
+}
+
+.lip-makeup__card-stock--low {
+color: #A77A06;
+}
+
+.lip-makeup__card-stock--in {
+color: #3C9342;
+}
+
+.lip-makeup__card-stock-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+animation: pulse 1.5s infinite;
+}
+
+.lip-makeup__card-stock--low .lip-makeup__card-stock-dot {
+background-color: #A77A06;
+}
+
+.lip-makeup__card-stock--in .lip-makeup__card-stock-dot {
+background-color: #3C9342;
+}
+
+.lip-makeup__card-badge,
+.lip-makeup__card-badge--sold-out {
+position: absolute;
+top: 10px;
+left: 10px;
+background-color: #dc2626;
+color: white;
+padding: 4px 10px;
+font-size: 12px;
+font-weight: 400;
+letter-spacing: 1px;
+font-family: 'Beae-font-vqca', sans-serif;
+}
+
+.lip-makeup__card-badge--sold-out {
+background-color: #111;
+}
+
+.lip-makeup__card-btn,
+.lip-makeup__card-btn-sold-out {
+width: 100%;
+background-color: white;
+padding: 12px;
+font-size: 16px;
+font-family: 'Roboto', sans-serif;
+cursor: pointer;
+border: 1px solid black;
+margin-top: 17.584px;
+}
+
+.lip-makeup__card-btn:hover {
+color: #ec7c98;
+}
+
+.lip-makeup__card-btn-sold-out {
+border: 1px solid gray;
+color: gray;
+cursor: not-allowed;
+}
+
+.lip-makeup__card-stock--soldout {
+color: #111; /* màu chữ đen */
+}
+
+.lip-makeup__card-stock--soldout .lip-makeup__card-stock-dot {
+background-color: #111;
+animation: pulse-soldout 1.5s infinite;
+}
+
+@keyframes pulse-soldout {
+0%   { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+70%  { box-shadow: 0 0 0 4px rgba(0, 0, 0, 0); }
+100% { box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+}
+
+
+/* Animation dot */
+@keyframes pulse {
+0% {
+box-shadow: 0 0 0 0 rgba(167, 122, 6, 0.7);
+}
+70% {
+box-shadow: 0 0 0 4px rgba(167, 122, 6, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(167, 122, 6, 0);
+}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+#lip-makeup {
+padding: 20px 15px;
+
+}
+
+.lip-makeup__container {
+flex-direction: column;
+gap: 20px;
+}
+
+.lip-makeup__media {
+flex: none;
+width: 100%;
+height: auto;
+}
+
+.lip-makeup__card-stock{
+gap: 10px;
+}
+
+.lip-makeup__image {
+  width: 100%;
+height: auto;
+object-fit: cover;
+display: block;
+}
+
+.lip-makeup__list {
+flex-wrap: nowrap;
+overflow-x: auto;
+gap: 16px;
+}
+
+.lip-makeup__card {
+flex: 0 0 42%;
+max-width: 42%;
+}
+
+.lip-makeup__card-name {
+font-size: 17px;
+height: 40px;
+-webkit-line-clamp: 2;
+}
+
+.lip-makeup__card-btn {
+margin: 0;
+}
+.lip-makeup__card-btn,
+.lip-makeup__card-btn-sold-out {
+margin: 0;
+}
+}
